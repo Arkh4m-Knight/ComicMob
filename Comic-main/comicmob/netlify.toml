@@ -1,5 +1,4 @@
 [build]
-  base = "Comic-main/comicmob"
   command = "npm run build"
   publish = "out"
 
