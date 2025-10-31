@@ -20,10 +20,10 @@ export default function SignupModal({ isOpen, onClose, onSuccess }: SignupModalP
     setError("");
 
     try {
-      const res = await fetch("/api/auth/signup", {
+      const res = await fetch("/api/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, username, password }),
+        body: JSON.stringify({ email, username, password, action: "signup" }),
       });
 
       if (!res.ok) {
